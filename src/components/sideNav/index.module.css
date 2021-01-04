@@ -1,0 +1,22 @@
+.sideMenu {
+  background: #fff;
+  display: inline-block;
+}
+.sideMenu ul {
+  list-style: none;
+  padding: 0 25px;
+  box-sizing: border-box;
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+.sideMenu ul:last-child {
+  border-bottom: none;
+}
+
+.sideMenu ul li {
+  padding: 20px 0;
+}
+
+.sideMenu li svg {
+  margin-right: 10px;
+}

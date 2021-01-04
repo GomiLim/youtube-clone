@@ -1,0 +1,18 @@
+.videoBox {
+  width: 22%;
+}
+
+.videoBox > div:nth-child(1) {
+  width: 100%;
+  height: 150px;
+  background: gray;
+}
+.videoBox > div:nth-child(2) {
+  display: flex;
+}
+.videoBox .videoInfo {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}

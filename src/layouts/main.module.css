@@ -1,0 +1,67 @@
+header {
+  height: 80px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.sideNavBox {
+  display: flex;
+  width: 200px;
+}
+
+.sideNav > svg {
+  vertical-align: middle;
+  font-size: 23px;
+}
+.logo {
+  width: 100px;
+  margin-left: 25px;
+  vertical-align: top;
+}
+
+.searchBox {
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+
+.searchBox input {
+  width: 50%;
+  min-width: 400px;
+  padding: 10px 15px;
+}
+
+.searchBox .serchButton {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  background: #fff;
+  color: gray;
+  margin-left: 10px;
+}
+
+.subNave {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 200px;
+  padding: 0 0 0 70px;
+  box-sizing: border-box;
+}
+
+.subNave li {
+  vertical-align: middle;
+}
+
+.contents {
+  display: flex;
+  min-height: 100vh;
+}
+.contents > div:nth-child(2) {
+  padding: 10px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
