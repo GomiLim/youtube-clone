@@ -6,15 +6,21 @@ import logo from '../assets/logo.png';
 
 //components
 import SideNav from '../components/sideNav';
+
 //modules
 import { faVideo, faTh, faBell, faUserCircle, faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useWindowSize } from '../modules/pagesize';
 
 const MainLayout = ({ children }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const browserWidth = useWindowSize();
   const menuToggle = () => {
     visible ? setVisible(false) : setVisible(true);
   };
+  useEffect(() => {
+    browserWidth < 800 && setVisible(false);
+  }, [browserWidth]);
 
   return (
     <>
@@ -52,7 +58,7 @@ const MainLayout = ({ children }) => {
         </ul>
       </header>
       <section className={styles.contents}>
-        <SideNav visible={visible} />
+        <SideNav visible={visible} browserWidth={browserWidth} />
         <div>{children}</div>
       </section>
     </>

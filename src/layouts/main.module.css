@@ -4,6 +4,10 @@ header {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
 }
 
 .sideNavBox {
@@ -60,8 +64,9 @@ header {
   min-height: 100vh;
 }
 .contents > div:nth-child(2) {
-  padding: 10px 40px;
+  padding: 5rem 0 0 4.5rem;
   box-sizing: border-box;
   width: 100%;
   background: rgba(0, 0, 0, 0.05);
+  text-align: left;
 }

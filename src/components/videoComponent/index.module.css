@@ -1,18 +1,44 @@
+.videoBoxWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .videoBox {
-  width: 22%;
 }
 
 .videoBox > div:nth-child(1) {
   width: 100%;
-  height: 150px;
-  background: gray;
+  height: auto;
+}
+.videoBox > div:nth-child(1) img {
+  width: 100%;
 }
 .videoBox > div:nth-child(2) {
   display: flex;
 }
+.videoBox > div:nth-child(2) > div {
+  flex-basis: 10%;
+}
+.videoBox > div:nth-child(2) > ul {
+  max-width: 90%;
+}
+
 .videoBox .videoInfo {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
+
+/* @media screen and (max-width: 1700px) {
+  .videoBox {
+    flex-shrink: 0.5;
+    flex-basis: 29%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .videoBox {
+    flex-shrink: 0.5;
+    flex-basis: 45%;
+  }
+} */

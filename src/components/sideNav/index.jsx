@@ -8,42 +8,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SideNavStyle = styled.div`
   overflow: hidden;
-  width: ${(props) => (props.visible ? '500px' : '75px')};
-  // transition: 0.2s;
-  p {
-    margin: 0;
-    display: ${(props) => (props.visible ? 'inline-block' : 'none')};
+  width: ${(props) => (props.visible ? '20rem' : '4.5rem')};
+  transition: 0.2s;
+
+  ul {
+    width: 20rem;
   }
 `;
-const SideNav = ({ visible }) => {
+const SideNav = ({ visible, browserWidth }) => {
   return (
-    <SideNavStyle className={styles.sideMenu} visible={visible}>
+    <SideNavStyle className={styles.sideMenu} visible={visible} browserWidth={browserWidth}>
       <ul>
         <li>
-          <FontAwesomeIcon icon={faHome} />
-          <p>홈</p>
+          <FontAwesomeIcon icon={faHome} />홈
         </li>
         <li>
           <FontAwesomeIcon icon={faFire} />
-          <p>인기</p>
+          인기
         </li>
         <li>
           <FontAwesomeIcon icon={faYoutube} />
-          <p>구독</p>
+          구독
         </li>
       </ul>
       <ul>
         <li>
           <FontAwesomeIcon icon={faBox} />
-          <p>보관함</p>
+          보관함
         </li>
         <li>
           <FontAwesomeIcon icon={faHistory} />
-          <p>시청기록</p>
+          시청기록
         </li>
         <li>
           <FontAwesomeIcon icon={faHeart} />
-          <p>좋아요 표시한 동영상</p>
+          좋아요 표시한 동영상
         </li>
       </ul>
     </SideNavStyle>
